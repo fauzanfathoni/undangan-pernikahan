@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll Invitation</title>
+    <style>
+        /* Menghilangkan margin dan padding default */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            scroll-behavior: smooth; /* Mengaktifkan scroll halus */
+            overflow: hidden; /* Menghilangkan scrollbar default */
+        }
+
+        /* Kontainer untuk mengatur scroll snap */
+        .scroll-container {
+            height: 100%;
+            scroll-snap-type: y mandatory; /* Mengaktifkan scroll snap secara vertikal */
+            overflow-y: scroll; /* Mengaktifkan scroll vertikal */
+            -webkit-overflow-scrolling: touch; /* Menambahkan scroll halus pada perangkat sentuh */
+            scroll-behavior: smooth; /* Mengaktifkan scroll halus */
+        }
+
+        /* Setiap bagian/slide */
+        .section {
+            scroll-snap-align: start; /* Snap ke bagian awal setiap section */
+            height: 100vh; /* Membuat setiap slide mengambil tinggi layar penuh */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Slide 1: Undangan */
+        .section.undangan {
+            background-color: #f4f4f4; /* Warna latar belakang untuk area undangan */
+        }
+
+        .section img {
+            max-width: 100%; /* Menyesuaikan lebar gambar dengan lebar kontainer */
+            height: auto; /* Menjaga aspek rasio gambar */
+        }
+    </style>
+</head>
+<body>
+
+<div class="scroll-container">
+    <!-- Bagian 1: Gambar Undangan -->
+    <div class="section undangan">
+        <img src="undangan.jpeg" alt="Undangan">
+    </div>
+</div>
+
+</body>
+</html>
